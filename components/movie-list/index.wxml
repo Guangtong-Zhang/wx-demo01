@@ -1,0 +1,14 @@
+<!--components/movie-list/index.wxml-->
+<view class="container movie-list-class">
+    <view class="title-container">
+        <text>{{title}}</text>
+        <text class="more-text" bind:tap="onGoToMoreMovie">更多 ></text>
+    </view>
+    <view class="movie-container">
+        <block wx:for="{{movies}}" wx:key="index">
+            <movie movie="{{item}}"/>
+        </block>
+        
+    </view>
+</view>
+

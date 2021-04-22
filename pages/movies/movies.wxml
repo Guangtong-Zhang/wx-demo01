@@ -1,0 +1,20 @@
+<!--pages/movies/movies.wxml-->
+<view class="container">
+    <l-search-bar placeholder="搜索" l-class="ex-seaech-bar" bind:lincancel="onSearchCancel"
+        bind:linconfirm="onSearchConfirm" />
+    <view wx:if="{{isSearch}}" class="searchResultContainer">
+        <block wx:for="{{searchResult}}" wx:key="index">
+            <movie class="movie" movie="{{item}}" />
+        </block>
+    </view>
+    <view wx:else>
+        <movie-list title="正在热映" data-title="正在热映" data-type="in_theaters" bind:onGoToMoreMovie="onGoToMoreMovie"
+            movies="{{inTheaters}}" movie-list-class="movie-list-class" />
+        <movie-list title="即将上映" data-title="即将上映" data-type="coming_soon" bind:onGoToMoreMovie="onGoToMoreMovie"
+            movies="{{comingSoon}}" movie-list-class="movie-list-class" />
+        <movie-list title="豆瓣TOP250" data-title="豆瓣TOP250" data-type="top250" bind:onGoToMoreMovie="onGoToMoreMovie"
+            movies="{{top250}}" movie-list-class="movie-list-class" />
+    </view>
+
+
+</view>

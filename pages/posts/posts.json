@@ -1,0 +1,13 @@
+{
+    "component": true,
+    "usingComponents": {
+        "l-icon":"/miniprogram_npm/lin-ui/icon/index",
+        "post":"/components/post/index"
+    },
+    "navigationBarBackgroundColor": "#C22A1E",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "文与字",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+}

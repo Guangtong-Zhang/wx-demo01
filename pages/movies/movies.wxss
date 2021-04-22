@@ -1,0 +1,39 @@
+/* pages/movies/movies.wxss */
+
+page {
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-list-class {
+    margin-bottom: 30rpx;
+}
+
+.movie {
+    margin-bottom: 1000rpx;
+}
+
+.ex-seaech-bar {
+    height: 90rpx !important;
+}
+
+.searchResultContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30rpx 28rpx;
+    justify-content: space-between;
+}
+
+.movie {
+    margin-bottom: 20rpx;
+}
+
+.searchResultContainer::after {
+    content: '';
+    width: 200rpx;
+}

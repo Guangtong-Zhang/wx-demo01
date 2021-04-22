@@ -1,0 +1,28 @@
+<!--pages/post-detail/post-detail.wxml-->
+<view class="container">
+    <image class="head-image" src="{{postDetailData.headImgSrc}}"></image>
+    <image wx:if="{{isPlaying}}" class="audio" bind:tap="stopMusic" src="/images/music/music-stop.png"></image>
+    <image wx:else class="audio" bind:tap="onMusic" src="/images/music/music-start.png"></image>
+    <view class="author-date">
+        <image class="avatar" src="{{postDetailData.avatar}}"></image>
+        <text class="author">{{postDetailData.author}}</text>
+        <text class="const-text">发表于</text>
+        <text class="date">{{postDetailData.dateTime}}</text>
+    </view>
+    <text class="title">{{postDetailData.title}}</text>
+    <view class="tool">
+        <view class="circle">
+            <image wx:if="{{collected}}" bind:tap="onCollect" class="" src="/images/icon/collection.png"></image>
+            <image wx:else bind:tap="onCollect" class="" src="/images/icon/collection-anti.png"></image>
+
+            <button open-type='share' class="share-img" style="background-image:url(../../images/icon/share.png);"
+            plain="true"></button>
+            <!-- <button open-type="share">
+                <image class="share-img" src="/images/icon/share.png"></image>
+            </button> -->
+
+        </view>
+        <view class="horizon"></view>
+    </view>
+    <text class="detail">{{postDetailData.detail}}</text>
+</view>
